@@ -63,3 +63,34 @@ let x = `The number of miles driven is ${miles}  and the gallons of gas is ${gas
 document.getElementById("output4").innerHTML = x
 })
 }
+document.getElementById("btn5").addEventListener("click", () => {
+    let celsius = parseFloat(document.getElementById("celsius").value);
+    let fahrenheit = (celsius * 9/5) + 32;
+
+    let result = `The temperature in Fahrenheit is ${fahrenheit}°F.`;
+    document.getElementById("output5").innerHTML = result;
+});
+
+document.getElementById("btn6").addEventListener("click", () => {
+    let cookiesEaten = parseFloat(document.getElementById("cookiesEaten").value);
+    let caloriesPerCookie = 300 / 40;
+    let totalCalories = cookiesEaten * caloriesPerCookie;
+
+    let result = `The total number of calories consumed is ${totalCalories} calories.`;
+    document.getElementById("output6").innerHTML = result;
+});
+document.getElementById("btn7").addEventListener("click", () => {
+    let males = parseFloat(document.getElementById("males").value);
+    let females = parseFloat(document.getElementById("females").value);
+    let totalStudents = males + females;
+
+  
+        let percentageMales = (males / totalStudents * 100);
+        let percentageFemales = (females / totalStudents * 100);
+
+        let result = `The percentage of males is ${percentageMales}% and the percentage of females is ${percentageFemales}%.`;
+        document.getElementById("output7").innerHTML = result;
+
+});
+
+
