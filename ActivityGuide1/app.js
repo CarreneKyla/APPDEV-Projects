@@ -84,12 +84,11 @@ document.getElementById("btn7").addEventListener("click", () => {
     let females = parseFloat(document.getElementById("females").value);
     let totalStudents = males + females;
 
-  
-        let percentageMales = (males / totalStudents * 100);
-        let percentageFemales = (females / totalStudents * 100);
+    let percentageMales = (males / totalStudents * 100);
+    let percentageFemales = (females / totalStudents * 100);
 
-        let result = `The percentage of males is ${percentageMales}% and the percentage of females is ${percentageFemales}%.`;
-        document.getElementById("output7").innerHTML = result;
+    let result = `The percentage of males is ${percentageMales}% and the percentage of females is ${percentageFemales}%.`;
+    document.getElementById("output7").innerHTML = result;
 
 });
 
