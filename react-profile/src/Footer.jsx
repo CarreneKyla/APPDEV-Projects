@@ -1,10 +1,11 @@
+import './Footer.css';
 
-export default function Footer(){
-    return (
-      <footer>
-        <p>
-          &copy; {new Date().getFullYear()} All rights reserved || Carrene Kyla M. Lacson
-        </p>
-      </footer>
-    );
-  }
+function Footer() {
+  return (
+    <footer className="footer">
+      <p>&copy;{new Date().getFullYear()} My React Profile || By: Carrene Kyla M. Lacson</p>
+    </footer>
+  );
+}
+
+export default Footer;
