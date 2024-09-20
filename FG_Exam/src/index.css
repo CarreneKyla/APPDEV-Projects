@@ -1,0 +1,12 @@
+.App {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  img {
+    max-width: 300px;
+    margin: 20px 0;
+  }
+  title {
+    background-color: rgb(6, 63, 114);
+  }
