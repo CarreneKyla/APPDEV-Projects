@@ -1,0 +1,240 @@
+.shop-container {
+    padding-left: 700px;
+    padding-right: 700px;
+    padding-top: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+footer {
+    padding-left: 600px;
+    padding-right: 600px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.items-list {
+    margin-top: 20px;
+    padding: 20px;
+    background-image: url('src/images/grocery.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    position: relative;
+}
+
+.items-list::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.items-list > * {
+    position: relative;
+    z-index: 2;
+}
+
+.cart {
+    margin-top: 20px;
+    padding: 20px;
+    background-image: url('src/images/cart.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    position: relative;
+}
+
+.cart::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.cart > * {
+    position: relative;
+    z-index: 2;
+}
+
+.checkout {
+    margin-top: 20px;
+    padding: 20px;
+    background-image: url('src/images/receipt.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    border-top: 2px solid #ddd;
+    position: relative;
+}
+
+.checkout::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.checkout > * {
+    position: relative;
+    z-index: 2;
+}
+
+.receipt {
+    padding: 20px;
+    margin-top: 20px;
+    background-image: url('src/images/receipt.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    border-top: 2px solid #ddd;
+    position: relative;
+}
+
+.receipt::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.receipt > * {
+    position: relative;
+    z-index: 2;
+}
+
+.item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 8px;
+}
+
+h4 {
+    margin: 0;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+p {
+    margin: 0 5px;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.add-to-cart {
+    cursor: pointer;
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #45a049;
+}
+
+.cart-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 8px;
+}
+
+input {
+    padding: 5px;
+    margin-top: 5px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.remove-from-cart {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #f44336;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.remove-from-cart:hover {
+    background-color: #d32f2f;
+}
+
+.reset-item {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #ff9800;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.reset-item:hover {
+    background-color: #fb8c00;
+}
