@@ -87,7 +87,7 @@ const products = [
     switches: 'Cherry MX Brown',
     connection: 'USB-C Wired',
     price: '$199',
-    image: 'path/to/image1.jpg',
+    image: 'src/images/red.png',
   },
   {
     id: 10,
@@ -97,7 +97,7 @@ const products = [
     switches: 'Razer Yellow',
     connection: 'USB-C Wired',
     price: '$139',
-    image: 'path/to/image1.jpg',
+    image: 'src/images/black2.png',
   },
   {
     id: 11,

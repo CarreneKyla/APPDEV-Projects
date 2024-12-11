@@ -1,0 +1,46 @@
+.employee-profile {
+    padding-bottom: 100px; /* Adds space at the bottom of the profile page */
+  }
+  
+  .pdf-section {
+    margin-top: 30px;
+    background-color: #6B8F71; /* Same color as product card */
+    border: 1px solid #345635; /* Border color matches product card */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px; /* Space at the bottom of the pdf section */
+  }
+  
+  .show-manual-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color:  #345635;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .show-manual-button:hover {
+    background-color: #4a6a47; /* Slightly lighter green on hover */
+  }
+  
+  .pdf-viewer iframe {
+    border: none;
+    margin: 0 auto;
+    display: block;
+    width: 80%; /* Adjust to match the card's width */
+    height: 600px; /* Set the height as per your requirement */
+  }
+  
+  .pdf-viewer {
+    margin-bottom: 30px; /* Space below the iframe */
+  }
+  
+  .product-details {
+    padding-bottom: 50px; /* Optional: You can keep this or adjust as needed */
+  }
+  

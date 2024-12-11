@@ -7,13 +7,16 @@ const CompanyProfile = () => {
   return (
     <div className="company-profile">
       <h1>Our Team</h1>
-      <ul>
+      <div className="employee-cards">
         {employees.map((employee) => (
-          <li key={employee.id}>
-            <Link to={`/company-profile/${employee.id}`}>{employee.name}</Link> - {employee.position}
-          </li>
+          <div key={employee.id} className="employee-card">
+            <h3>{employee.name}</h3>
+            <p><strong>Position:</strong> {employee.position}</p>
+            <p><strong>Qualifications:</strong> {employee.qualifications}</p>
+            <Link to={`/company-profile/${employee.id}`} className="view-profile-link">View Profile</Link>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

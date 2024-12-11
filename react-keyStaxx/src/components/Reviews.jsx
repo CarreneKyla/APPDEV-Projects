@@ -1,49 +1,52 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import '../styles/ReviewsPage.css'; // Import the CSS file
 
 const ReviewsPage = () => {
   const [name, setName] = useState('');
   const [userReview, setUserReview] = useState('');
-  const [productReview, setProductReview] = useState('');
-  const [submittedProductReviews, setSubmittedProductReviews] = useState([]);
   const [submittedCompanyReviews, setSubmittedCompanyReviews] = useState([]);
+
+  useEffect(() => {
+    // Load reviews from localStorage when the component mounts
+    const companyReviews = JSON.parse(localStorage.getItem('companyReviews')) || [];
+    console.log("Loaded reviews from localStorage:", companyReviews);  // Debug log
+    setSubmittedCompanyReviews(companyReviews);
+  }, []);
+
+  useEffect(() => {
+    // Update localStorage whenever the reviews state changes
+    if (submittedCompanyReviews.length > 0) {
+      localStorage.setItem('companyReviews', JSON.stringify(submittedCompanyReviews));
+      console.log("Saved reviews to localStorage:", submittedCompanyReviews);  // Debug log
+    }
+  }, [submittedCompanyReviews]);
 
   const handleNameChange = (e) => {
     setName(e.target.value);
-  };
-
-  const handleProductReviewChange = (e) => {
-    setProductReview(e.target.value);
   };
 
   const handleUserReviewChange = (e) => {
     setUserReview(e.target.value);
   };
 
-  const handleProductReviewSubmit = (e) => {
-    e.preventDefault();
-    if (productReview.trim()) {
-      setSubmittedProductReviews([
-        ...submittedProductReviews,
-        { id: submittedProductReviews.length + 1, reviewer: name || 'Anonymous', feedback: productReview },
-      ]);
-      setProductReview('');
-    }
-  };
-
   const handleCompanyReviewSubmit = (e) => {
     e.preventDefault();
     if (userReview.trim()) {
-      setSubmittedCompanyReviews([
-        ...submittedCompanyReviews,
-        { id: submittedCompanyReviews.length + 1, reviewer: name || 'Anonymous', feedback: userReview },
-      ]);
-      setUserReview('');
+      // Generate a unique ID for each review to avoid duplicate IDs
+      const newReview = {
+        id: Date.now(), // Using the current timestamp for a unique ID
+        reviewer: name || 'Anonymous',
+        feedback: userReview,
+      };
+      setSubmittedCompanyReviews((prevReviews) => [...prevReviews, newReview]);
+      setUserReview(''); // Clear the review input field
+      setName(''); // Clear the name input field
     }
   };
 
   return (
     <div className="reviews-page">
-      <h1>Reviews Page</h1>
+      <h1>Company Reviews</h1>
 
       <div className="name-input">
         <label>
@@ -57,42 +60,22 @@ const ReviewsPage = () => {
         </label>
       </div>
 
-      <div className="product-reviews">
-        <h2>Product Reviews</h2>
-        <form onSubmit={handleProductReviewSubmit}>
-          <textarea
-            placeholder="Write your product review..."
-            value={productReview}
-            onChange={handleProductReviewChange}
-          />
-          <button type="submit">Submit Product Review</button>
-        </form>
-        <ul>
-          {submittedProductReviews.map((review) => (
-            <li key={review.id}>
-              <strong>{review.reviewer}:</strong> {review.feedback}
-            </li>
-          ))}
-        </ul>
-      </div>
+      <form onSubmit={handleCompanyReviewSubmit}>
+        <textarea
+          placeholder="Write your company review..."
+          value={userReview}
+          onChange={handleUserReviewChange}
+        />
+        <button type="submit">Submit Company Review</button>
+      </form>
 
-      <div className="company-reviews">
-        <h2>Company Reviews</h2>
-        <form onSubmit={handleCompanyReviewSubmit}>
-          <textarea
-            placeholder="Write your company review..."
-            value={userReview}
-            onChange={handleUserReviewChange}
-          />
-          <button type="submit">Submit Company Review</button>
-        </form>
-        <ul>
-          {submittedCompanyReviews.map((review) => (
-            <li key={review.id}>
-              <strong>{review.reviewer}:</strong> {review.feedback}
-            </li>
-          ))}
-        </ul>
+      <div className="reviews-list">
+        {submittedCompanyReviews.map((review) => (
+          <div key={review.id} className="review-card">
+            <strong>{review.reviewer}:</strong>
+            <p>{review.feedback}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
