@@ -3,9 +3,9 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: 20px;
+  padding: 50px;
   animation: fadeIn 1.5s ease-in-out;
-  margin-bottom: 100px;
+  margin-bottom: 300px;
 }
 
 .product-card {
@@ -58,12 +58,16 @@
 
 .pdf-section {
   margin-top: 30px;
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
 }
 
 .show-manual-button {
   padding: 10px 20px;
   font-size: 16px;
-  background-color:  #345635;
+  background-color: transparent;
   color: white;
   border: none;
   cursor: pointer;
@@ -73,7 +77,7 @@
 }
 
 .show-manual-button:hover {
-  background-color:  #345635;
+  background-color: #4a6a47;
 }
 
 .pdf-viewer iframe {
@@ -83,25 +87,26 @@
 }
 
 .product-details {
-  padding-bottom: 50px; 
+  padding-bottom: 50px;
 }
 
 .pdf-viewer {
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
 }
+
 .product-reviews {
   width: 80%;
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #E3EFD3; /* Pastel green background */
+  background-color: #E3EFD3;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-top: 30px;
 }
 
 .product-reviews h2 {
-  color: #345635; /* Dark green color for the product review title */
+  color: #345635;
   margin-bottom: 15px;
   font-size: 1.5rem;
 }
@@ -116,19 +121,19 @@
   width: 100%;
   height: 80px;
   padding: 10px;
-  border: 1px solid #AEC3B0; /* Light green border */
+  border: 1px solid #AEC3B0;
   border-radius: 5px;
   font-size: 14px;
   resize: none;
-  background-color: #F4F9F4; /* Very light pastel green background for textarea */
-  color: #345635; /* Darker green text for readability */
-  box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+  background-color: #F4F9F4;
+  color: #345635;
+  box-sizing: border-box;
 }
 
 .submit-review-button {
   padding: 8px 16px;
   font-size: 14px;
-  background-color: #345635; /* Dark green background */
+  background-color: #345635;
   color: white;
   border: none;
   cursor: pointer;
@@ -139,7 +144,7 @@
 }
 
 .submit-review-button:hover {
-  background-color: #4a6a47; /* Slightly lighter green on hover */
+  background-color: #4a6a47;
 }
 
 .reviews-list {
@@ -147,7 +152,7 @@
 }
 
 .review-card {
-  background-color: #F4F9F4; /* Light pastel green background for cards */
+  background-color: #F4F9F4;
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 8px;
@@ -161,11 +166,10 @@
 
 .review-card strong {
   font-size: 1.1rem;
-  color: #345635; /* Dark green for reviewer name */
+  color: #345635;
 }
 
 .review-card p {
-  color: #6B8F71; /* Lighter greenish gray for review text */
+  color: #6B8F71;
   font-size: 1rem;
 }
-

@@ -142,3 +142,22 @@ button:active {
   color: #AEC3B0;
   font-style: italic;
 }
+.image-card {
+  background-color: #6B8F71;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+  text-align: center;
+}
+
+.image-card img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.showcase-image {
+  width: 100%;
+  border-radius: 10px;
+}

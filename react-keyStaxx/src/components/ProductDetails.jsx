@@ -16,7 +16,6 @@ const ProductDetails = () => {
     setShowManual(!showManual);
   };
 
-  // Load stored reviews from localStorage on component mount
   useEffect(() => {
     const savedReviews = JSON.parse(localStorage.getItem(`productReview_${id}`));
     if (savedReviews) {
@@ -24,7 +23,6 @@ const ProductDetails = () => {
     }
   }, [id]);
 
-  // Save reviews to localStorage when they change
   useEffect(() => {
     if (submittedProductReviews.length > 0) {
       localStorage.setItem(`productReview_${id}`, JSON.stringify(submittedProductReviews));
@@ -56,11 +54,11 @@ const ProductDetails = () => {
       <p><strong>Connection:</strong> {product.connection}</p>
       <p><strong>Price:</strong> {product.price}</p>
 
-      <div className="pdf-section">
+    
         <button onClick={toggleManual} className="show-manual-button">
           {showManual ? 'Hide Product Manual' : 'Show Product Manual'}
         </button>
-
+    <div className="hello">
         {showManual && (
           <div className="pdf-viewer">
             <iframe

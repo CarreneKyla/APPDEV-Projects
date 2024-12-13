@@ -9,6 +9,11 @@ const HomePage = () => {
         <p>"The most innovative keyboards worldwide."</p>
       </div>
 
+      <div className="info-card image-card">
+        <h2>Showcase</h2>
+        <img src="src/images/rgb.gif" alt="Showcase" className="showcase-image" />
+      </div>
+
       <div className="mission-vision-container">
         <div className="info-card mission">
           <h2>Our Mission</h2>

@@ -1,15 +1,15 @@
 .employee-profile {
-    padding-bottom: 100px; /* Adds space at the bottom of the profile page */
+    padding-bottom: 100px;
   }
   
   .pdf-section {
     margin-top: 30px;
-    background-color: #6B8F71; /* Same color as product card */
-    border: 1px solid #345635; /* Border color matches product card */
+    background-color: #6B8F71; 
+    border: 1px solid #345635; 
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px; /* Space at the bottom of the pdf section */
+    margin-bottom: 30px; 
   }
   
   .show-manual-button {
@@ -25,22 +25,22 @@
   }
   
   .show-manual-button:hover {
-    background-color: #4a6a47; /* Slightly lighter green on hover */
+    background-color: #4a6a47; 
   }
   
   .pdf-viewer iframe {
     border: none;
     margin: 0 auto;
     display: block;
-    width: 80%; /* Adjust to match the card's width */
-    height: 600px; /* Set the height as per your requirement */
+    width: 80%;
+    height: 600px; 
   }
   
   .pdf-viewer {
-    margin-bottom: 30px; /* Space below the iframe */
+    margin-bottom: 30px; 
   }
   
   .product-details {
-    padding-bottom: 50px; /* Optional: You can keep this or adjust as needed */
+    padding-bottom: 50px;
   }
   

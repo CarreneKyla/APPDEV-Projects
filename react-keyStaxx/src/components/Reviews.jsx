@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/ReviewsPage.css'; // Import the CSS file
+import '../styles/ReviewsPage.css';
 
 const ReviewsPage = () => {
   const [name, setName] = useState('');
@@ -7,17 +7,13 @@ const ReviewsPage = () => {
   const [submittedCompanyReviews, setSubmittedCompanyReviews] = useState([]);
 
   useEffect(() => {
-    // Load reviews from localStorage when the component mounts
-    const companyReviews = JSON.parse(localStorage.getItem('companyReviews')) || [];
-    console.log("Loaded reviews from localStorage:", companyReviews);  // Debug log
-    setSubmittedCompanyReviews(companyReviews);
+    const storedReviews = JSON.parse(localStorage.getItem('companyReviews')) || [];
+    setSubmittedCompanyReviews(storedReviews);
   }, []);
 
   useEffect(() => {
-    // Update localStorage whenever the reviews state changes
     if (submittedCompanyReviews.length > 0) {
       localStorage.setItem('companyReviews', JSON.stringify(submittedCompanyReviews));
-      console.log("Saved reviews to localStorage:", submittedCompanyReviews);  // Debug log
     }
   }, [submittedCompanyReviews]);
 
@@ -32,15 +28,14 @@ const ReviewsPage = () => {
   const handleCompanyReviewSubmit = (e) => {
     e.preventDefault();
     if (userReview.trim()) {
-      // Generate a unique ID for each review to avoid duplicate IDs
       const newReview = {
-        id: Date.now(), // Using the current timestamp for a unique ID
+        id: Date.now(),
         reviewer: name || 'Anonymous',
         feedback: userReview,
       };
       setSubmittedCompanyReviews((prevReviews) => [...prevReviews, newReview]);
-      setUserReview(''); // Clear the review input field
-      setName(''); // Clear the name input field
+      setUserReview('');
+      setName('');
     }
   };
 
@@ -50,9 +45,9 @@ const ReviewsPage = () => {
 
       <div className="name-input">
         <label>
-          Your Name: 
-          <input 
-            type="text" 
+          Your Name:
+          <input
+            type="text"
             placeholder="Enter your name"
             value={name}
             onChange={handleNameChange}
